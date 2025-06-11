@@ -1,0 +1,53 @@
+{
+  "pins": {
+    "gomod2nix": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "gomod2nix"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.6.0",
+      "revision": "5d387097aa716f35dd99d848dc26d8d5b62a104c",
+      "url": "https://api.github.com/repos/nix-community/gomod2nix/tarball/v1.6.0",
+      "hash": "1mdwyjz43nnh7gfq4rc54kql6fy65hw17w0p4gwklnfqciwrkax2"
+    },
+    "nilla": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "nilla"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "2e98ae315a592ad6b6de44670514c048dcc88dc7",
+      "url": "https://github.com/nilla-nix/nilla/archive/2e98ae315a592ad6b6de44670514c048dcc88dc7.tar.gz",
+      "hash": "0fpl01sb3aw104w6190j3bcakkqd0z1r8s28x53p58hccy2p16fp"
+    },
+    "nilla-utils": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "arnarg",
+        "repo": "nilla-utils"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7db8221bc2383ff3f06022312f3f39dca7e05252",
+      "url": "https://github.com/arnarg/nilla-utils/archive/7db8221bc2383ff3f06022312f3f39dca7e05252.tar.gz",
+      "hash": "1saw222y052y9kgjhi7b2kg330fbaj5j4yypm66gnhbwfjyppq4x"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.11pre812987.a12f3a996148/nixexprs.tar.xz",
+      "hash": "00bvlg4qmpwaj7cnwrgiv4s8f5hqwnizdbkvn76r5ima3d4zhqay"
+    }
+  },
+  "version": 5
+}

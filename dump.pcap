@@ -1,0 +1,540 @@
+15:14:59.213786 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [S], seq 1564015933, win 65495, options [mss 65495,sackOK,TS val 2507017099 ecr 0,nop,wscale 7], length 0
+E..<r.@.@............j..]8.=.........0.........
+.n..........
+15:14:59.213846 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [S.], seq 360903987, ack 1564015934, win 65483, options [mss 65495,sackOK,TS val 2507017100 ecr 2507017099,nop,wscale 7], length 0
+E..<..@.@.<............j...3]8.>.....0.........
+.n...n......
+15:14:59.213875 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [.], ack 1, win 512, options [nop,nop,TS val 2507017100 ecr 2507017100], length 0
+E..4r.@.@............j..]8.>...4.....(.....
+.n...n..
+15:14:59.214045 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [P.], seq 1:468, ack 1, win 512, options [nop,nop,TS val 2507017100 ecr 2507017100], length 467
+E...r.@.@............j..]8.>...4...........
+.n...n..OPTIONS /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: authorization,content-type
+Origin: https://www.typingmind.com
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Priority: u=4
+
+
+15:14:59.214059 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [.], ack 468, win 508, options [nop,nop,TS val 2507017100 ecr 2507017100], length 0
+E..4~.@.@..............j...4]8.......(.....
+.n...n..
+15:14:59.222263 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [P.], seq 1:344, ack 468, win 512, options [nop,nop,TS val 2507017108 ecr 2507017100], length 343
+E...~.@.@..............j...4]8.............
+.n...n..HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Headers: authorization,content-type
+Content-Length: 0
+Date: Wed, 11 Jun 2025 13:14:59 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:14:59.222322 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [.], ack 344, win 510, options [nop,nop,TS val 2507017108 ecr 2507017108], length 0
+E..4r.@.@............j..]8...........(.....
+.n...n..
+15:14:59.225104 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [P.], seq 468:1005, ack 344, win 512, options [nop,nop,TS val 2507017111 ecr 2507017108], length 537
+E..Mr.@.@............j..]8...........B.....
+.n...n..POST /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 73
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=4
+
+{"mcpServers":{"basic-memory":{"command":"basic-memory","args":["mcp"]}}}
+15:14:59.266949 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [.], ack 1005, win 508, options [nop,nop,TS val 2507017153 ecr 2507017111], length 0
+E..4~.@.@..............j....]9.*.....(.....
+.n...n..
+15:15:00.529041 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [P.], seq 344:745, ack 1005, win 508, options [nop,nop,TS val 2507018415 ecr 2507017111], length 401
+E...~.@.@..l...........j....]9.*...........
+.n...n..HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 128
+ETag: W/"80-gGteIW0/ho6Fg5tej2ZXTUpM7Qg"
+Date: Wed, 11 Jun 2025 13:15:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"All MCP clients started successfully","clients":[{"id":"basic-memory","message":"MCP client started successfully"}]}
+15:15:00.542436 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [P.], seq 1005:1460, ack 745, win 512, options [nop,nop,TS val 2507018428 ecr 2507018415], length 455
+E...r.@.@............j..]9.*...............
+.n...n..OPTIONS /clients HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: authorization
+Origin: https://www.typingmind.com
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Priority: u=4
+
+
+15:15:00.542469 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [.], ack 1460, win 505, options [nop,nop,TS val 2507018428 ecr 2507018428], length 0
+E..4~.@.@..............j....]9.......(.....
+.n...n..
+15:15:00.543690 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [P.], seq 745:1075, ack 1460, win 505, options [nop,nop,TS val 2507018429 ecr 2507018428], length 330
+E..~~.@.@..............j....]9.......r.....
+.n...n..HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Headers: authorization
+Content-Length: 0
+Date: Wed, 11 Jun 2025 13:15:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:15:00.546540 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [P.], seq 1460:1924, ack 1075, win 512, options [nop,nop,TS val 2507018432 ecr 2507018429], length 464
+E...r.@.@............j..]9.....f...........
+.n...n..GET /clients HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+If-None-Match: W/"ef-6OKUHPk3bjHVcACGophdSy1G3Y8"
+Priority: u=4
+
+
+15:15:00.562948 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [P.], seq 1075:1582, ack 1924, win 502, options [nop,nop,TS val 2507018449 ecr 2507018432], length 507
+E../~.@.@..............j...f]9.......$.....
+.n...n..HTTP/1.1 200 OK
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 239
+ETag: W/"ef-4FGUMm7aBt+2d0DDabKeFtzd5E8"
+Date: Wed, 11 Jun 2025 13:15:00 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"id":"basic-memory","command":"basic-memory","args":["mcp"],"createdAt":"2025-06-11T13:15:00.525Z","tools":["delete_note","read_content","build_context","recent_activity","search_notes","read_note","write_note","canvas","project_info"]}]
+15:15:00.603882 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [.], ack 1582, win 512, options [nop,nop,TS val 2507018490 ecr 2507018449], length 0
+E..4r.@.@............j..]9.....a.....(.....
+.n...n..
+15:15:06.224480 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [F.], seq 1924, ack 1582, win 512, options [nop,nop,TS val 2507024110 ecr 2507018449], length 0
+E..4r.@.@............j..]9.....a.....(.....
+.n&..n..
+15:15:06.226633 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.34922: Flags [F.], seq 1582, ack 1925, win 502, options [nop,nop,TS val 2507024112 ecr 2507024110], length 0
+E..4~.@.@..............j...a]9.......(.....
+.n&..n&.
+15:15:06.226706 lo    In  IP 127.0.0.1.34922 > 127.0.0.1.50880: Flags [.], ack 1583, win 512, options [nop,nop,TS val 2507024112 ecr 2507024112], length 0
+E..4r.@.@............j..]9.....b.....(.....
+.n&..n&.
+15:16:25.267047 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [S], seq 126753481, win 65495, options [mss 65495,sackOK,TS val 2507103153 ecr 0,nop,wscale 7], length 0
+E..<..@.@.`..........V...............0.........
+.o[.........
+15:16:25.267102 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [S.], seq 1658184358, ack 126753482, win 65483, options [mss 65495,sackOK,TS val 2507103153 ecr 2507103153,nop,wscale 7], length 0
+E..<..@.@.<............Vb............0.........
+.o[..o[.....
+15:16:25.267134 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 1, win 512, options [nop,nop,TS val 2507103153 ecr 2507103153], length 0
+E..4.   @.@.`..........V......b........(.....
+.o[..o[.
+15:16:25.267301 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 1:468, ack 1, win 512, options [nop,nop,TS val 2507103153 ecr 2507103153], length 467
+E....
+@.@.^..........V......b..............
+.o[..o[.OPTIONS /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: authorization,content-type
+Origin: https://www.typingmind.com
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Priority: u=4
+
+
+15:16:25.267319 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [.], ack 468, win 508, options [nop,nop,TS val 2507103153 ecr 2507103153], length 0
+E..4O1@.@..............Vb............(.....
+.o[..o[.
+15:16:25.271579 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 1:344, ack 468, win 512, options [nop,nop,TS val 2507103157 ecr 2507103153], length 343
+E...O2@.@..8...........Vb..................
+.o[..o[.HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Headers: authorization,content-type
+Content-Length: 0
+Date: Wed, 11 Jun 2025 13:16:25 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:25.271652 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 344, win 510, options [nop,nop,TS val 2507103157 ecr 2507103157], length 0
+E..4..@.@.`..........V......b........(.....
+.o[..o[.
+15:16:25.277870 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 468:1005, ack 344, win 512, options [nop,nop,TS val 2507103163 ecr 2507103157], length 537
+E..M..@.@.^..........V......b........B.....
+.o[..o[.POST /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 73
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=0
+
+{"mcpServers":{"basic-memory":{"command":"basic-memory","args":["mcp"]}}}
+15:16:25.282646 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 344:679, ack 1005, win 508, options [nop,nop,TS val 2507103168 ecr 2507103163], length 335
+E...O3@.@..?...........Vb............w.....
+.o[..o[.HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 63
+ETag: W/"3f-DleoRyFLBzl1M7tywpG/59dtfc0"
+Date: Wed, 11 Jun 2025 13:16:25 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"All MCP clients started successfully","clients":[]}
+15:16:25.295577 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 1005:1479, ack 679, win 512, options [nop,nop,TS val 2507103181 ecr 2507103168], length 474
+E.....@.@.^..........V......b..M...........
+.o[..o[.OPTIONS /clients/basic-memory/tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: authorization
+Origin: https://www.typingmind.com
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Priority: u=4
+
+
+15:16:25.296238 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 679:1009, ack 1479, win 505, options [nop,nop,TS val 2507103182 ecr 2507103181], length 330
+E..~O4@.@..C...........Vb..M.. ......r.....
+.o[..o[.HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Headers: authorization
+Content-Length: 0
+Date: Wed, 11 Jun 2025 13:16:25 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:25.300541 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 1479:1964, ack 1009, win 512, options [nop,nop,TS val 2507103186 ecr 2507103182], length 485
+E.....@.@.^..........V.... .b..............
+.o[..o[.GET /clients/basic-memory/tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+If-None-Match: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Priority: u=4
+
+
+15:16:25.312436 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 1009:1221, ack 1964, win 502, options [nop,nop,TS val 2507103198 ecr 2507103186], length 212
+E...O5@.@..............Vb....."u...........
+.o[..o[.HTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+ETag: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Date: Wed, 11 Jun 2025 13:16:25 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:25.354009 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 1221, win 512, options [nop,nop,TS val 2507103240 ecr 2507103198], length 0
+E..4..@.@.`..........V...."ub..k.....(.....
+.o\..o[.
+15:16:28.051345 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 1964:2501, ack 1221, win 512, options [nop,nop,TS val 2507105937 ecr 2507103198], length 537
+E..M..@.@.^..........V...."ub..k.....B.....
+.of..o[.POST /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 73
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=4
+
+{"mcpServers":{"basic-memory":{"command":"basic-memory","args":["mcp"]}}}
+15:16:28.055129 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 1221:1556, ack 2501, win 498, options [nop,nop,TS val 2507105941 ecr 2507105937], length 335
+E...O6@.@..<...........Vb..k..$......w.....
+.of..of.HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 63
+ETag: W/"3f-DleoRyFLBzl1M7tywpG/59dtfc0"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"All MCP clients started successfully","clients":[]}
+15:16:28.055175 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 1556, win 510, options [nop,nop,TS val 2507105941 ecr 2507105941], length 0
+E..4..@.@.`..........V....$.b........(.....
+.of..of.
+15:16:28.096377 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 2501:2986, ack 1556, win 512, options [nop,nop,TS val 2507105982 ecr 2507105941], length 485
+E.....@.@.^..........V....$.b..............
+.of..of.GET /clients/basic-memory/tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+If-None-Match: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Priority: u=4
+
+
+15:16:28.100497 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 1556:1768, ack 2986, win 495, options [nop,nop,TS val 2507105986 ecr 2507105982], length 212
+E...O7@.@..............Vb.....&s...........
+.of..of.HTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+ETag: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:28.100515 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 1768, win 511, options [nop,nop,TS val 2507105986 ecr 2507105986], length 0
+E..4..@.@.`..........V....&sb........(.....
+.of..of.
+15:16:28.113513 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 2986:3523, ack 1768, win 512, options [nop,nop,TS val 2507105999 ecr 2507105986], length 537
+E..M..@.@.^..........V....&sb........B.....
+.of..of.POST /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 73
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=4
+
+{"mcpServers":{"basic-memory":{"command":"basic-memory","args":["mcp"]}}}
+15:16:28.116639 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 1768:2103, ack 3523, win 491, options [nop,nop,TS val 2507106002 ecr 2507105999], length 335
+E...O8@.@..:...........Vb.....(......w.....
+.of..of.HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 63
+ETag: W/"3f-DleoRyFLBzl1M7tywpG/59dtfc0"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"All MCP clients started successfully","clients":[]}
+15:16:28.131027 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 3523:4016, ack 2103, win 512, options [nop,nop,TS val 2507106017 ecr 2507106002], length 493
+E..!..@.@.^..........V....(.b..............
+.of..of.OPTIONS /clients/basic-memory/call_tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: authorization,content-type
+Origin: https://www.typingmind.com
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Priority: u=4
+
+
+15:16:28.132450 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 2103:2446, ack 4016, win 488, options [nop,nop,TS val 2507106018 ecr 2507106017], length 343
+E...O9@.@..1...........Vb.....*y...........
+.of..of.HTTP/1.1 204 No Content
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Headers: authorization,content-type
+Content-Length: 0
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:28.135405 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 4016:4571, ack 2446, win 512, options [nop,nop,TS val 2507106021 ecr 2507106018], length 555
+E.._..@.@.^..........V....*yb..4.....T.....
+.of..of.POST /clients/basic-memory/call_tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 65
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=4
+
+{"name":"search_notes","arguments":{"query":"shipping industry"}}
+15:16:28.175124 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 2446:3793, ack 4571, win 484, options [nop,nop,TS val 2507106061 ecr 2507106021], length 1347
+E..wO:@.@..D...........Vb..4..,......l.....
+.og..of.HTTP/1.1 200 OK
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 1077
+ETag: W/"435-dJvX0+WCNF8VL4J5Duis/7vhBrw"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"content":[{"type":"text","text":"{\"results\": [{\"title\": \"Summary of Hapag-Lloyd CEO's Views on Global Economy and Shipping Industry\", \"type\": \"entity\", \"score\": -1e-06, \"entity\": \"shipping-industry/summary-of-hapag-lloyd-ceos-views-on-global-economy-and-shipping-industry\", \"permalink\": \"shipping-industry/summary-of-hapag-lloyd-ceos-views-on-global-economy-and-shipping-industry\", \"content\": \"### Summary of Hapag-Lloyd CEO's Views on Global Economy and Shipping Industry\\n\\nThe article discusses the outlook for the global economy and the shipping industry, focusing on the perspectives of Rolf Habben Jansen, CEO of Hapag-Lloyd, one of the wor\", \"file_path\": \"Shipping Industry/Summary of Hapag-Lloyd CEO's Views on Global Economy and Shipping Industry.md\", \"metadata\": {\"entity_type\": \"note\"}, \"category\": null, \"from_entity\": \"shipping-industry/summary-of-hapag-lloyd-ceos-views-on-global-economy-and-shipping-industry\", \"to_entity\": null, \"relation_type\": null}], \"current_page\": 1, \"page_size\": 10}"}],"isError":false}
+15:16:28.197645 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 4571:5108, ack 3793, win 586, options [nop,nop,TS val 2507106083 ecr 2507106061], length 537
+E..M..@.@.^..........V....,.b..w...J.B.....
+.og#.og.POST /start HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/json
+Content-Length: 73
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+Priority: u=4
+
+{"mcpServers":{"basic-memory":{"command":"basic-memory","args":["mcp"]}}}
+15:16:28.202714 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 3793:4128, ack 5108, win 480, options [nop,nop,TS val 2507106088 ecr 2507106083], length 335
+E...O;@.@..7...........Vb..w.........w.....
+.og(.og#HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 63
+ETag: W/"3f-DleoRyFLBzl1M7tywpG/59dtfc0"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"All MCP clients started successfully","clients":[]}
+15:16:28.226697 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [P.], seq 5108:5593, ack 4128, win 591, options [nop,nop,TS val 2507106112 ecr 2507106088], length 485
+E.....@.@.^..........V......b......O.......
+.og@.og(GET /clients/basic-memory/tools HTTP/1.1
+Host: localhost:50880
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Origin: https://www.typingmind.com
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Authorization: Bearer MstxaV8zGxGBLAYWj4tCn
+Connection: keep-alive
+If-None-Match: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Priority: u=4
+
+
+15:16:28.235530 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [P.], seq 4128:4340, ack 5593, win 477, options [nop,nop,TS val 2507106121 ecr 2507106112], length 212
+E...O<@.@..............Vb.....0............
+.ogI.og@HTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+ETag: W/"1129-ha8gv6w/93o09Ds0iw8CRGIFIjI"
+Date: Wed, 11 Jun 2025 13:16:28 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+15:16:28.276022 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 4340, win 591, options [nop,nop,TS val 2507106162 ecr 2507106121], length 0
+E..4..@.@.`..........V....0.b......O.(.....
+.ogr.ogI
+15:16:33.273454 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [F.], seq 5593, ack 4340, win 591, options [nop,nop,TS val 2507111159 ecr 2507106121], length 0
+E..4..@.@.`..........V....0.b......O.(.....
+.oz..ogI
+15:16:33.273923 lo    In  IP 127.0.0.1.50880 > 127.0.0.1.47702: Flags [F.], seq 4340, ack 5594, win 477, options [nop,nop,TS val 2507111160 ecr 2507111159], length 0
+E..4O=@.@..............Vb.....0......(.....
+.oz..oz.
+15:16:33.273983 lo    In  IP 127.0.0.1.47702 > 127.0.0.1.50880: Flags [.], ack 4341, win 591, options [nop,nop,TS val 2507111160 ecr 2507111160], length 0
+E..4..@.@.`..........V....0.b......O.(.....
+.oz..oz.

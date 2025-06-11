@@ -1,0 +1,18 @@
+address: ":8081"
+
+plugins:
+  prefix: abcdefg
+  # prefixFile: /tmp/prefix
+
+  cors:
+    allowOrigins:
+      - "*"
+
+mcp:
+  token: abcdefg       
+  # tokenFile: /tmp/token
+
+  cors:
+    allowOrigins:
+      - https://typingmind.com
+      - https://www.typingmind.com
