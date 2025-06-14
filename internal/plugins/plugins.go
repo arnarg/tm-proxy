@@ -11,4 +11,5 @@ type ServiceResponse struct {
 
 func Setup(group *gin.RouterGroup) {
 	group.GET("/web-page-reader/get-content", fetchWebPage)
+	group.GET("/web-search/fastgpt", fetchFastGPT)
 }
