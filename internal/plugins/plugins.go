@@ -1,6 +1,11 @@
 package plugins
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
 
 type ServiceResponse struct {
 	Success        bool   `json:"success"`
@@ -11,5 +16,12 @@ type ServiceResponse struct {
 
 func Setup(group *gin.RouterGroup) {
 	group.GET("/web-page-reader/get-content", fetchWebPage)
+	group.OPTIONS("/web-page-reader/get-content", autoAllowOptions)
 	group.GET("/web-search/fastgpt", fetchFastGPT)
+	group.OPTIONS("/web-search/fastgpt", autoAllowOptions)
+}
+
+func autoAllowOptions(c *gin.Context) {
+	fmt.Println("HELLO")
+	c.Status(http.StatusNoContent)
 }

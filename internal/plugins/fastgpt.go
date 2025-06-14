@@ -40,9 +40,9 @@ Results for search query "{{.Query}}"
 {{.Results}}
 
 References:
-{{range $i, $r := .References}}
-{{inc $i}}: {{$r.Title}} ({{$r.URL}})
-{{end}}
+{{- range $i, $r := .References}}
+[{{inc $i}}]: {{$r.Title}} ({{$r.URL}})
+{{- end}}
 `
 
 type FastGPTResponse struct {

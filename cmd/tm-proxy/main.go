@@ -34,6 +34,12 @@ func main() {
 
 	corsConfig := cors.Config{
 		AllowMethods: []string{"GET"},
+		AllowHeaders: []string{
+			"Origin",
+			"Content-Length",
+			"Content-Type",
+			"Kagi-API-Key",
+		},
 	}
 	if len(conf.Plugins.CORS.AllowOrigins) < 1 {
 		corsConfig.AllowAllOrigins = true
