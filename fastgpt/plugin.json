@@ -1,0 +1,43 @@
+{
+    "id": "get_fastgpt_search_results",
+    "uuid": "24a4a0c9-6b47-4cc4-8016-20f4f1a51fd2",
+    "title": "FastGPT Search",
+    "iconURL": "https://help.kagi.com/assets/kagi-logo.Bh8O11VU.png",
+    "githubURL": "https://github.com/arnarg/tm-proxy",
+    "openaiSpec": {
+        "name": "get_fastgpt_search_results",
+        "parameters": {
+            "type": "object",
+            "required": [
+                "keyword"
+            ],
+            "properties": {
+                "keyword": {
+                    "type": "string",
+                    "description": "The search keyword"
+                }
+            }
+        },
+        "description": "Search for information from the internet in real-time using Kagi FastGPT."
+    },
+    "outputType": "respond_to_ai",
+    "preInstalled": true,
+    "userSettings": [
+        {
+            "name": "pluginServer",
+            "label": "Plugin Server",
+            "required": true,
+            "description": "The URL of the plugin server",
+            "placeholder": "https://..."
+        },
+        {
+            "name": "kagiAPIKey",
+            "type": "password",
+            "label": "Kagi API Key",
+            "required": true
+        }
+    ],
+    "overviewMarkdown": "This plugin allows the AI assistant to search for information from the internet in real-time using Kagi FastGPT.\n\n**🔑 Kagi API Key needed**.\n\nExample usage:\n\n> What's the gold price?\n\n> How's the weather at HCMC at the moment?\n",
+    "authenticationType": "AUTH_TYPE_NONE",
+    "implementationType": "javascript",
+}

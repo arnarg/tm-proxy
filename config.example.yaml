@@ -5,14 +5,6 @@ plugins:
   # prefixFile: /tmp/prefix
 
   cors:
+    # Omitting this list makes it "*"
     allowOrigins:
       - "*"
-
-mcp:
-  token: abcdefg       
-  # tokenFile: /tmp/token
-
-  cors:
-    allowOrigins:
-      - https://typingmind.com
-      - https://www.typingmind.com

@@ -1,7 +1,6 @@
 package plugins
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -16,12 +15,14 @@ type ServiceResponse struct {
 
 func Setup(group *gin.RouterGroup) {
 	group.GET("/web-page-reader/get-content", fetchWebPage)
-	group.OPTIONS("/web-page-reader/get-content", autoAllowOptions)
 	group.GET("/web-search/fastgpt", fetchFastGPT)
-	group.OPTIONS("/web-search/fastgpt", autoAllowOptions)
+
+	// If the CORS middleware doesn't catch the OPTIONS request
+	// we want to respond with 403 by default
+	group.OPTIONS("/web-page-reader/get-content", defaultForbiddenOptions)
+	group.OPTIONS("/web-search/fastgpt", defaultForbiddenOptions)
 }
 
-func autoAllowOptions(c *gin.Context) {
-	fmt.Println("HELLO")
-	c.Status(http.StatusNoContent)
+func defaultForbiddenOptions(c *gin.Context) {
+	c.Status(http.StatusForbidden)
 }

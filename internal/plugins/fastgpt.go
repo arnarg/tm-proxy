@@ -35,14 +35,16 @@ type fastGPTReferences struct {
 }
 
 var tmpl = `-----
-Results for search query "{{.Query}}"
+Results for search query "{{ .Query }}"
 -----
-{{.Results}}
+{{ .Results }}
 
+{{ if .References -}}
 References:
-{{- range $i, $r := .References}}
-[{{inc $i}}]: {{$r.Title}} ({{$r.URL}})
-{{- end}}
+{{- range $i, $r := .References }}
+[{{ inc $i }}]: {{ $r.Title }} ({{ $r.URL }})
+{{- end }}
+{{- end }}
 `
 
 type FastGPTResponse struct {

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/arnarg/tm-proxy/internal/config"
 	"github.com/arnarg/tm-proxy/internal/plugins"
@@ -40,6 +41,7 @@ func main() {
 			"Content-Type",
 			"Kagi-API-Key",
 		},
+		MaxAge: 12 * time.Hour,
 	}
 	if len(conf.Plugins.CORS.AllowOrigins) < 1 {
 		corsConfig.AllowAllOrigins = true

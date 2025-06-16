@@ -1,6 +1,12 @@
 schema = 3
 
 [mod]
+  [mod."github.com/JohannesKaufmann/dom"]
+    version = "v0.2.0"
+    hash = "sha256-vrJG0spzGYAflEvAz0sYvD6nC6IYI5lAZbIx82GBtQE="
+  [mod."github.com/JohannesKaufmann/html-to-markdown/v2"]
+    version = "v2.3.3"
+    hash = "sha256-B+ZJk86VJUscaf91tv5uuTeL6u9HN6cS+5+4TOiNC+E="
   [mod."github.com/andybalholm/cascadia"]
     version = "v1.3.3"
     hash = "sha256-jv7ZshpSd7FZzKKN6hqlUgiR8C3y85zNIS/hq7g76Ho="
@@ -83,17 +89,17 @@ schema = 3
     version = "v0.15.0"
     hash = "sha256-EsCsTDmn+j3S8yzV4n2WJyDuYBDwIlj29M9OBxWNMGQ="
   [mod."golang.org/x/crypto"]
-    version = "v0.36.0"
-    hash = "sha256-Np+suvZdMOXALDm4m8nDNa+QsvUV0rE0PEINuxCoKGM="
+    version = "v0.37.0"
+    hash = "sha256-9NwDEcii1e2JYM/+3y1yNzWnt/ChMm27e9OtfuF39OM="
   [mod."golang.org/x/net"]
-    version = "v0.38.0"
-    hash = "sha256-iHmyxkZQLw1PsUZaXHMt84GrjbXPvkEc92sLoK3W++c="
+    version = "v0.39.0"
+    hash = "sha256-IP29+yGphWKUT7wHTyzqA2rnRT4AJ7oWcT6NKLzkWcM="
   [mod."golang.org/x/sys"]
-    version = "v0.31.0"
-    hash = "sha256-aulv5obCrhheMlSq7seUgP3C29nfZABwiQ4IBNisgME="
+    version = "v0.32.0"
+    hash = "sha256-c9RRnyKQy9Kl8hpbtcgkm1O5H7gOdk9Rv925F8fZS6E="
   [mod."golang.org/x/text"]
-    version = "v0.23.0"
-    hash = "sha256-TiYX1K4DYpP1dEV06whOm43xyOntjrPFi+VAdncoeCY="
+    version = "v0.24.0"
+    hash = "sha256-qFbmteGOvJfvbLXiOSI8Fsz5Ixt2ZhSYx0/sIqApC7Y="
   [mod."google.golang.org/protobuf"]
     version = "v1.36.6"
     hash = "sha256-lT5qnefI5FDJnowz9PEkAGylH3+fE+A3DJDkAyy9RMc="
