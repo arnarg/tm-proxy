@@ -6,7 +6,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"time"
 
 	"github.com/JohannesKaufmann/html-to-markdown/v2/converter"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/base"
@@ -37,7 +36,7 @@ func fetchWebPage(c *gin.Context) {
 	}
 
 	// Unescape the url query parameter
-	url, err := url.QueryUnescape(qurl)
+	purl, err := url.QueryUnescape(qurl)
 	if err != nil {
 		c.JSON(
 			http.StatusBadRequest,
@@ -52,7 +51,7 @@ func fetchWebPage(c *gin.Context) {
 	}
 
 	// Fetch URL manually first
-	resp, err := http.Get(url)
+	resp, err := http.Get(purl)
 	if err != nil {
 		c.JSON(
 			http.StatusInternalServerError,
@@ -83,7 +82,7 @@ func fetchWebPage(c *gin.Context) {
 	}
 
 	// Parse URL for readability
-	parsedURL, err := url.ParseRequestURI(url)
+	parsedURL, err := url.Parse(purl)
 	if err != nil {
 		c.JSON(
 			http.StatusInternalServerError,
@@ -117,7 +116,7 @@ func fetchWebPage(c *gin.Context) {
 	}
 
 	// Convert article to markdown
-	md, err := convertToMarkdown(url, article.Content)
+	md, err := convertToMarkdown(parsedURL, article.Content)
 	if err != nil {
 		// If the conversion to markdown fails
 		// we just return the HTML article content
@@ -150,13 +149,7 @@ func fetchWebPage(c *gin.Context) {
 	)
 }
 
-func convertToMarkdown(u, content string) (string, error) {
-	// Parse the URL for use in relative links
-	purl, err := url.Parse(u)
-	if err != nil {
-		return "", err
-	}
-
+func convertToMarkdown(purl *url.URL, content string) (string, error) {
 	// Construct a base URL
 	burl := fmt.Sprintf("%s://%s", purl.Scheme, purl.Host)
 
