@@ -1,7 +1,9 @@
 package plugins
 
 import (
+	"bytes"
 	"fmt"
+	"io"
 	"net/http"
 	"net/url"
 	"time"
@@ -49,8 +51,8 @@ func fetchWebPage(c *gin.Context) {
 		return
 	}
 
-	// Fetch URL and convert the page using readability
-	article, err := readability.FromURL(url, 10*time.Second)
+	// Fetch URL manually first
+	resp, err := http.Get(url)
 	if err != nil {
 		c.JSON(
 			http.StatusInternalServerError,
@@ -59,6 +61,56 @@ func fetchWebPage(c *gin.Context) {
 				Message:        err.Error(),
 				StatusCode:     http.StatusInternalServerError,
 				ResponseObject: nil,
+			},
+		)
+		return
+	}
+	defer resp.Body.Close()
+
+	// Read the entire body into memory
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		c.JSON(
+			http.StatusInternalServerError,
+			&ServiceResponse{
+				Success:        false,
+				Message:        err.Error(),
+				StatusCode:     http.StatusInternalServerError,
+				ResponseObject: nil,
+			},
+		)
+		return
+	}
+
+	// Parse URL for readability
+	parsedURL, err := url.ParseRequestURI(url)
+	if err != nil {
+		c.JSON(
+			http.StatusInternalServerError,
+			&ServiceResponse{
+				Success:        false,
+				Message:        err.Error(),
+				StatusCode:     http.StatusInternalServerError,
+				ResponseObject: nil,
+			},
+		)
+		return
+	}
+
+	// Try to extract main content using readability
+	article, err := readability.FromReader(bytes.NewReader(body), parsedURL)
+	if err != nil {
+		// Return full page content as fallback
+		c.JSON(
+			http.StatusOK,
+			&ServiceResponse{
+				Success:    true,
+				Message:    "Content fetched successfully (fallback to full page)",
+				StatusCode: http.StatusOK,
+				ResponseObject: &WebPageResponse{
+					Title:   "",
+					Content: string(body),
+				},
 			},
 		)
 		return
