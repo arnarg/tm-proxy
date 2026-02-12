@@ -7,12 +7,13 @@ import (
 	"net/http"
 	"net/url"
 
+	"codeberg.org/readeck/go-readability/v2"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/converter"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/base"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/commonmark"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/table"
 	"github.com/gin-gonic/gin"
-	"github.com/go-shiori/go-readability"
+	"golang.org/x/net/html"
 )
 
 type WebPageResponse struct {
@@ -116,10 +117,24 @@ func fetchWebPage(c *gin.Context) {
 	}
 
 	// Convert article to markdown
-	md, err := convertToMarkdown(parsedURL, article.Content)
+	md, err := convertToMarkdown(parsedURL, article.Node)
 	if err != nil {
 		// If the conversion to markdown fails
 		// we just return the HTML article content
+		buf := bytes.NewBuffer([]byte{})
+		if err := article.RenderHTML(buf); err != nil {
+			c.JSON(
+				http.StatusInternalServerError,
+				&ServiceResponse{
+					Success:        false,
+					Message:        err.Error(),
+					StatusCode:     http.StatusInternalServerError,
+					ResponseObject: nil,
+				},
+			)
+			return
+		}
+
 		c.JSON(
 			http.StatusOK,
 			&ServiceResponse{
@@ -127,8 +142,8 @@ func fetchWebPage(c *gin.Context) {
 				Message:    "Content fetched successfully",
 				StatusCode: http.StatusOK,
 				ResponseObject: &WebPageResponse{
-					Title:   article.Title,
-					Content: article.Content,
+					Title:   article.Title(),
+					Content: buf.String(),
 				},
 			},
 		)
@@ -142,14 +157,14 @@ func fetchWebPage(c *gin.Context) {
 			Message:    "Content fetched successfully",
 			StatusCode: http.StatusOK,
 			ResponseObject: &WebPageResponse{
-				Title:   article.Title,
-				Content: md,
+				Title:   article.Title(),
+				Content: string(md),
 			},
 		},
 	)
 }
 
-func convertToMarkdown(purl *url.URL, content string) (string, error) {
+func convertToMarkdown(purl *url.URL, doc *html.Node) ([]byte, error) {
 	// Construct a base URL
 	burl := fmt.Sprintf("%s://%s", purl.Scheme, purl.Host)
 
@@ -163,8 +178,8 @@ func convertToMarkdown(purl *url.URL, content string) (string, error) {
 	)
 
 	// Do the conversion
-	return conv.ConvertString(
-		content,
+	return conv.ConvertNode(
+		doc,
 		converter.WithDomain(burl),
 	)
 }
